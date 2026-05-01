@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    background: #222121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    top: 0;                   /* Stick to the very top */
+    z-index: 1000;
+    position: sticky;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooths the transition */
+}
+
+.logo{
+    font-size: 24px;
+}
+/* 6. Navigation Links & Hover */
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+/* The Hover Effect */
+nav ul li:hover {
+    color: #ffb400; /* A golden/yellow color looks great on dark backgrounds */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* hero section */
+
+.hero{
+    width: 100%;
+    height: auto;
+    background: url(/images/heo-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+.hero h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.Search-box{
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Search-box input{
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border:0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    border: 1px solid rgb(241, 101, 101);;
+}
+
+.Search-box button{
+    padding: 10px 20px;
+    outline: none;
+    border:0;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1rem;
+    background: rgb(249, 10, 10);
+    color: white;
+    cursor: pointer;
+}
+
+ /* Recipe start to here */
+/* 3. RECIPE SECTION (One Row) */
+.recipe {
+    padding: 50px 0;
+    
+}
+
+.recipe h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.recipe-section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    /* Forces 4 columns in one row on desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+/* 4. RECIPE CARDS & TRANSITIONS */
+.recipe-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden; /* Clips the image and button to the rounded corners */
+    display: flex;
+    flex-direction: column; /* Allows the button to push to the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Cards */
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} 
+
+.recipe-card h2 {
+    font-size: 20px;
+    padding: 15px 15px 5px 15px;
+} 
+
+.recipe-card p {
+    font-size: 14px;
+    padding: 0 15px 15px 15px;
+    color: #555;
+    flex-grow: 1; /* Pushes button down if text is short */
+} 
+
+/* 5. VIEW RECIPE BUTTON */
+.recipe-card a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e45903;
+    color: #fff;
+    padding: 15px 0;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.recipe-card a:hover {
+    background-color: #bf4b02; /* Darker orange on hover */
+}
+
+/* Styling for About and Contact */
+.about, .contact {
+    padding: 30px 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2, .contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222121;
+}
+
+.about p, .contact p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Adding a gap before the footer */
+.contact {
+    margin-bottom: 30px; /* Ensures the footer doesn't touch the contact info */
+}
+
+ footer{
+    background: #333;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+ }
+ .menu-icon{
+    font-size: 24px;
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+ }
+
+ /* ............Media Query.............. */
+ 
+ @media only screen and (min-width:768px){
+    .menu-icon{
+        display: none;
+    }
+    .nav-list{
+        display: block;
+    }
+
+ }
+
+
+ @media only screen and (min-width:768px){
+    .her0 h2{
+        font-size: 28px;
+    }
+    .hero p{
+        font-size: 15px;
+    }
+
+ }
